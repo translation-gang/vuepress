@@ -145,6 +145,10 @@ module.exports = {
 
 Показывать ли номера строк слева в каждом блоке кода.
 
+**Смотри также:**
+
+- [Нумерация строк](../guide/markdown.md#нумерация-строк)
+
 ### markdown.slugify
 
 - Тип: `Function`
@@ -212,7 +216,7 @@ module.exports = {
 - Тип: `Object`
 - По умолчанию: `{}`
 
-Настройки для [sass-loader](https://github.com/postcss/postcss-loader) для загрузки `*.scss` файлов.
+Настройки для [sass-loader](https://github.com/webpack-contrib/sass-loader) для загрузки `*.scss` файлов.
 
 ### sass
 
