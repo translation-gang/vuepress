@@ -106,6 +106,10 @@ module.exports = {
           {
             text: 'Настройки стандартной темы',
             link: '/ru/default-theme-config/'
+          },
+          {
+            text: 'История изменений',
+            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
           }
         ],
         sidebar: {
