@@ -332,7 +332,11 @@ module.exports = {
 }
 ```
 
-Подробнее в [документации Algolia DocSearch](https://github.com/algolia/docsearch#docsearch-options).
+::: warning Примечание
+В отличие от движка [встроенного поиска](#built-in-search), который работает из коробки — [поиск Algolia](https://community.algolia.com/docsearch/) требует отправить ваш сайт для индексирования перед началом работы. 
+:::
+
+Подробнее в [документации поиска Algolia](https://github.com/algolia/docsearch#docsearch-options).
 
 ## Последнее обновление
 
