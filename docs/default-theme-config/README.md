@@ -356,6 +356,31 @@ Note that it's `off` by default. If given `string`, it will be displayed as a pr
   Since `lastUpdated` is based on `git`, so you can only use it in a `git` repository.
 :::
 
+## Service Workers
+
+The `themeConfig.serviceWorker` option allows you to configure about service workers.
+
+### Popup UI to refresh contents
+
+The `themeConfig.serviceWorker.updatePopup` option enables the popup to refresh contents. The popup will be shown when the site is updated (the service worker is updated). It provides `refresh` button to allow users to refresh contents immediately.
+
+::: tip NOTE
+If without the `refresh` button, the new service worker will be active after all clients are closed.
+This means that visitors cannot see new contents until they close all tabs of your site.
+
+But the `refresh` button activates the new service worker immediately.
+:::
+
+``` js
+module.exports = {
+  themeConfig: {
+    serviceWorker {
+      updatePopup: true | {message: "New content is available.", buttonText: "Refresh"}
+    }
+  }
+}
+```
+
 ## Prev / Next Links
 
 Prev and next links are automatically inferred based on the sidebar order of the active page. You can also explicitly overwrite or disable them using `YAML front matter`:
@@ -421,34 +446,30 @@ $codeBgColor = #282c34
 
 ### Existing issues <Badge text="< 0.12.0" type='error'/>
 
-In order to override the default variables mentioned above, `override.styl` will be imported at the end of the `config.styl` in default theme, and this file will be used by multiple files, so once you wrote styles here, your style will be duplicated by multiple times. See [#637](https://github.com/vuejs/vuepress/issues/637).
-
-In fact, `style constants override` and `styles override` are two things, the former should be executed before any CSS is compiled, while the latter should be generated at the end of the CSS bundle, which has the highest priority. 
+In order to override the default variables mentioned above, `override.styl` will be imported at the end of the `config.styl` in default theme, and this file will be used by multiple files, so once you wrote styles here, your style would be duplicated by multiple times. See [#637](https://github.com/vuejs/vuepress/issues/637).
 
 ### Migrate your styles to `style.styl` <Badge text="0.12.0+"/>
 
-Start from `0.12.0`, we split `override.styl` into two APIs: `override.styl` and `style.styl`:
+In fact, The `stylus constants override` should be completed before all Stylus files are compiled; and the `user's additional CSS styles` should be generated at the end of the final style file. Therefore, these two duties should not be completed by the same stylus file.
 
-If you wrote styles at `override.styl` in the past, e.g.
+Start from `0.12.0`, we split `override.styl` into two APIs: `override.styl` and `style.styl`. If you wrote styles at `override.styl` in the past, e.g.
 
 ``` stylus
-// override.styl
-$textColor = red // style constants override
+// .vuepress/override.styl
+$textColor = red // stylus constants override.
 
-#my-style {} // styles override or custom styles.
+#my-style {} // your extra styles.
 ```
 
 You'll need to separate the style part to `style.styl`:
 
 ``` stylus
-// override.styl
-// SHOULD ONLY focus on style constants override.
+// .vuepress/override.styl, SHOULD ONLY contain "stylus constants override".
 $textColor = red
 ```
 
 ``` stylus
-// style.styl
-// SHOULD focus on styles override or your custom styles.
+// .vuepress/style.styl, your extra styles.
 #my-style {}
 ```
 

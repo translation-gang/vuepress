@@ -34,6 +34,9 @@ module.exports = {
     repo: 'vuejs/vuepress',
     editLinks: true,
     docsDir: 'docs',
+    serviceWorker: {
+      updatePopup: true
+    },
     locales: {
       '/': {
         label: 'English',
