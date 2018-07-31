@@ -106,6 +106,12 @@ module.exports = {
         selectText: 'Languages',
         editLinkText: 'Изменить эту страницу на GitHub',
         lastUpdated: 'Последнее обновление',
+        serviceWorker: {
+          updatePopup: {
+            message: 'Доступно обновление контента.',
+            buttonText: 'Обновить'
+          }
+        },
         nav: [
           {
             text: 'Руководство',
