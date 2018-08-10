@@ -333,7 +333,7 @@ module.exports = {
 ```
 
 ::: warning Примечание
-В отличие от движка [встроенного поиска](#built-in-search), который работает из коробки — [поиск Algolia](https://community.algolia.com/docsearch/) требует отправить ваш сайт для индексирования перед началом работы. 
+В отличие от движка [встроенного поиска](#built-in-search), который работает из коробки — [поиск Algolia](https://community.algolia.com/docsearch/) требует отправить ваш сайт для индексирования перед началом работы.
 :::
 
 Подробнее в [документации поиска Algolia](https://github.com/algolia/docsearch#docsearch-options).
@@ -364,7 +364,7 @@ module.exports = {
 Не путайте эту опцию с [Конфигурация > serviceWorker](../config/README.md#serviceworker), поскольку [Конфигурация > serviceWorker](../config/README.md#serviceworker) это опция **уровня сайта**, в то время как эта опция **уровня темы**.
 :::
 
-### Всплывающее сообщение в UI для обновления контента <Badge text="0.13.0+"/>
+### Всплывающее сообщение в UI для обновления контента <Badge text="0.13.0+"/> <Badge text="beta" type="warn"/>
 
 Опция `themeConfig.serviceWorker.updatePopup` добавляет всплывающее сообщение для обновления контента. Оно отобразится при обновлении сайта (т.е. при обновлении service worker). В сообщении будет кнопка `Обновить`, чтобы пользователи могли обновить контент сразу.
 
