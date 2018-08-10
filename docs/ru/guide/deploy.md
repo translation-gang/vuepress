@@ -140,7 +140,7 @@ pages:
 2. Создайте аккаунт на Heroku [здесь](https://signup.heroku.com).
 
 3. Запустите `heroku login` и введите данные вашего аккаунта Heroku:
-  
+
  ``` bash
  heroku login
  ```

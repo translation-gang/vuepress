@@ -233,7 +233,7 @@ module.exports = {
   markdown: {
     lineNumbers: true
   }
-}  
+}
 ```
 
 <!-- TODO Support line numbers for specific fence block -->
@@ -279,7 +279,7 @@ module.exports = {
 Также поддерживается [подсветка строк](#подсветка-строк-в-бnоке-кода):
 
 ``` md
-<<< @/filepath{highlightLines} 
+<<< @/filepath{highlightLines}
 ```
 
 **Входные данные**
